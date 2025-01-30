@@ -1,0 +1,17 @@
+/* Styles for form elements and layout */
+.form-check-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.results {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
