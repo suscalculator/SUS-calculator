@@ -101,13 +101,14 @@
     <section id="contact" class="contact-section py-5">
         <div class="container text-center">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+            <p>Email: <a href="mailto:hello@suscalculator.com">hello@suscalculator.com</a></p>
         </div>
     </section>
     
     <!-- Footer -->
     <footer class="text-center py-3">
-        <p>Open Source Project by <a href="https://github.com/olawaleadediran" target="_blank">Olawale Adediran</a></p>
+        <p>Open Source Project by <a href="https://olawaleadediran.com" target="_blank">Olawale Adediran</a></p>
+        <p>Git link <a href="https://github.com/Olawaldroid/SUS-calculator" target="_blank">Git page</a></p>
     </footer>
 </body>
 </html>
