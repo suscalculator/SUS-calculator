@@ -22,10 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p>Check the interpretation section for details.</p>';
         echo '</div>';
 
-        
-        // Send data to stats.php
+        // Save the SUS score for stats.php to use, without displaying it immediately
         $_POST['sus_score'] = $susScore;
-        include 'stats.php';  // Update stats file
+        
+        // Update stats without displaying it here
+        file_put_contents('stats.json', json_encode([
+            "total_uses" => isset($stats['total_uses']) ? $stats['total_uses'] + 1 : 1,
+            "last_used" => date("Y-m-d H:i:s"),
+            "average_score" => isset($stats['average_score']) 
+                ? (($stats['average_score'] * ($stats['total_uses'] ?? 0) + $susScore) / (($stats['total_uses'] ?? 0) + 1))
+                : $susScore
+        ], JSON_PRETTY_PRINT));
     }
 }
 ?>
