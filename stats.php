@@ -1,17 +1,39 @@
-<!-- stats.php -->
 <?php
-// File to store statistics
-define('STATS_FILE', 'stats.json');
+$statsFile = 'stats.json';
 
-// Initialize or load existing stats
-if (!file_exists(STATS_FILE)) {
-    $stats = ['usage_count' => 0];
-    file_put_contents(STATS_FILE, json_encode($stats));
-} else {
-    $stats = json_decode(file_get_contents(STATS_FILE), true);
+// Initialize stats array
+$stats = [
+    "total_uses" => 0,
+    "last_used" => "",
+    "average_score" => 0
+];
+
+// Check if stats.json exists and read data
+if (file_exists($statsFile)) {
+    $stats = json_decode(file_get_contents($statsFile), true);
 }
 
-// Increment usage count
-$stats['usage_count']++;
-file_put_contents(STATS_FILE, json_encode($stats));
+// Update stats
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $score = isset($_POST['sus_score']) ? (float)$_POST['sus_score'] : 0;
+
+    // Increment total uses
+    $stats["total_uses"] += 1;
+    $stats["last_used"] = date("Y-m-d H:i:s");
+
+    // Recalculate average score
+    $stats["average_score"] = $stats["total_uses"] > 1
+        ? (($stats["average_score"] * ($stats["total_uses"] - 1)) + $score) / $stats["total_uses"]
+        : $score;
+
+    // Save back to JSON file
+    file_put_contents($statsFile, json_encode($stats, JSON_PRETTY_PRINT));
+}
+
+// Display stats
+echo "<table class='table table-bordered mt-3'>";
+echo "<tr><th>Total Uses</th><td>{$stats['total_uses']}</td></tr>";
+echo "<tr><th>Last Used</th><td>{$stats['last_used']}</td></tr>";
+echo "<tr><th>Average SUS Score</th><td>" . round($stats['average_score'], 2) . "</td></tr>";
+echo "</table>";
 ?>
