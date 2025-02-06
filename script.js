@@ -20,14 +20,3 @@ function validateForm() {
     }
     return formValid;
 }
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector("form");
-        form.addEventListener("submit", function () {
-            if (!form.dataset.submitted) {
-                form.dataset.submitted = "true";
-            } else {
-                event.preventDefault(); // Prevent duplicate submission
-            }
-        });
-    });
-</script>
