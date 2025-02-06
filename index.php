@@ -39,7 +39,16 @@
     </header>
     
     <div class="container my-5">
-        <form method="post" action="process.php" onsubmit="return validateForm()">        
+        <?php 
+if (isset($_POST['sus_score'])) {
+    echo '<div class="results">';
+    echo '<h2>SUS Score</h2>';
+    echo '<p class="text-primary"><b>' . round($_POST['sus_score'], 2) . '</b></p>';
+    echo '<p>Check the interpretation section for details.</p>';
+    echo '</div>';
+}
+?>
+        <form method="post" action="process.php">       
             <?php include 'questions.php'; ?> <!-- Load questions dynamically -->
             <div class="btn-container text-center mt-4">
                 <button type="submit" class="btn btn-primary">Calculate</button>
