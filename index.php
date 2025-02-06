@@ -21,11 +21,8 @@
     </nav>
     
     <!-- Hero Section with Video Background -->
-    <header class="hero text-center py-5">
+    <header class="hero text-center py-5" style="background: #333;">
         <div class="video-container">
-            <div class="video-placeholder" style="background: #333; height: 60px; padding: 20px; display: flex; align-items: center; justify-content: center; color: white;">
-                Video Unavailable
-            </div>
             <video autoplay loop muted onerror="this.style.display='none';">
                 <source src="https://www.pexels.com/video/person-browsing-the-internet-while-drinking-coffee-4828605/" type="video/mp4">
                 Your browser does not support the video tag.
