@@ -22,17 +22,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p>Check the interpretation section for details.</p>';
         echo '</div>';
 
-        // Save the SUS score for stats.php to use, without displaying it immediately
-        $_POST['sus_score'] = $susScore;
-        
-        // Update stats without displaying it here
-        file_put_contents('stats.json', json_encode([
-            "total_uses" => isset($stats['total_uses']) ? $stats['total_uses'] + 1 : 1,
-            "last_used" => date("Y-m-d H:i:s"),
-            "average_score" => isset($stats['average_score']) 
-                ? (($stats['average_score'] * ($stats['total_uses'] ?? 0) + $susScore) / (($stats['total_uses'] ?? 0) + 1))
-                : $susScore
-        ], JSON_PRETTY_PRINT));
+        // Load existing stats data
+        $statsFile = 'stats.json';
+        $stats = ["total_uses" => 0, "last_used" => "", "average_score" => 0];
+
+        if (file_exists($statsFile)) {
+            $stats = json_decode(file_get_contents($statsFile), true);
+        }
+
+        // Update stats
+        $totalUses = $stats['total_uses'] + 1;
+        $averageScore = $totalUses > 1
+            ? (($stats['average_score'] * $stats['total_uses']) + $susScore) / $totalUses
+            : $susScore;
+
+        $stats["total_uses"] = $totalUses;
+        $stats["last_used"] = date("Y-m-d H:i:s");
+        $stats["average_score"] = round($averageScore, 2);
+
+        // Save updated stats back to JSON file
+        file_put_contents($statsFile, json_encode($stats, JSON_PRETTY_PRINT));
     }
 }
 ?>
