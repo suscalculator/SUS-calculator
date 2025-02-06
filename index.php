@@ -115,5 +115,56 @@ if (isset($_POST['sus_score'])) {
         <p>Open Source Project by <a href="https://olawaleadediran.com" target="_blank">Olawale Adediran</a></p>
         <p>Git link <a href="https://github.com/Olawaldroid/SUS-calculator" target="_blank">Git page</a></p>
     </footer>
+    <!-- Bootstrap Modal (Popup for Results) -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">SUS Score</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Result will be injected here by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (Required for AJAX and Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS (Required for Modal) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AJAX Script for Form Submission -->
+<script>
+$(document).ready(function () {
+    $("form").submit(function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        $.ajax({
+            type: "POST",
+            url: "process.php",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function (response) {
+                if (response.error) {
+                    $("#modalTitle").text("Error");
+                    $("#modalBody").html('<div class="alert alert-danger">' + response.error + '</div>');
+                } else {
+                    $("#modalTitle").text("SUS Score");
+                    $("#modalBody").html('<p class="text-primary"><b>' + response.sus_score + '</b></p><p>Check the interpretation section for details.</p>');
+                }
+                $("#resultModal").modal("show"); // Show the modal popup
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
