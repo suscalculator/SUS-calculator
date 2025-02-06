@@ -39,8 +39,7 @@
     </header>
     
     <div class="container my-5">
-        <?php include 'process.php'; ?> <!-- Process form submissions -->
-        <form method="post" onsubmit="return validateForm()">
+        <form method="post" action="process.php" onsubmit="return validateForm()">        
             <?php include 'questions.php'; ?> <!-- Load questions dynamically -->
             <div class="btn-container text-center mt-4">
                 <button type="submit" class="btn btn-primary">Calculate</button>
