@@ -21,6 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p class="text-primary"><b>' . round($susScore, 2) . '</b></p>';
         echo '<p>Check the interpretation section for details.</p>';
         echo '</div>';
+
+        
+        // Send data to stats.php
+        $_POST['sus_score'] = $susScore;
+        include 'stats.php';  // Update stats file
     }
 }
 ?>
