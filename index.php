@@ -99,6 +99,8 @@ if (isset($_POST['sus_score'])) {
 <p> To use the SUS Calculator, simply answer the 10 questions about the usability of the system or product, and click the submit button. Our calculator will then calculate your SUS score and display it on the page. </p>
 
 <p> It's worth noting that while SUS scores provide a general indication of system usability, they should be used in conjunction with other user feedback, such as qualitative feedback, task completion rates, and user error rates, to gain a more comprehensive understanding of the user experience. </p>
+                            <p> Brooke, J. (1996). <a href="https://www.researchgate.net/publication/228593520_SUS_A_quick_and_dirty_usability_scale">SUS-A quick and dirty usability scale.</a> Usability evaluation in industry, 189(194), 4-7.</p>
+                            <p> Bangor, A., Kortum, P. and Miller, J. (2009). <a href="https://dl.acm.org/doi/abs/10.5555/2835587.2835589"> Determining what individual SUS scores mean: Adding an adjective rating scale.</a> Journal of usability studies, 4(3), 114-123. </p>
                         </div>
                     </div>
                 </div>
@@ -123,6 +125,22 @@ if (isset($_POST['sus_score'])) {
 <p>  <b>Interpret the findings:</b> Interpret the SUS score in the context of your project's goals. If the score is below average, consider conducting further user research or usability testing to pinpoint specific issues. If the score is high, celebrate your success and use the feedback to enhance the system even further.</p>
 <p> <b>Repeat the process:</b> If you plan to make iterative improvements to the system, it's advisable to conduct usability tests and measure the SUS score periodically. This will help you track the progress of the system's usability over time.</p>
 <p>Remember that the SUS score provides a quantitative measure of usability, but it should be complemented with qualitative feedback from participants to gain a comprehensive understanding of the system's strengths and weaknesses.</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h3 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour">
+                             Academic References
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+                        <div class="card-body">
+<p> Brooke, J. (1996). <a href="https://www.researchgate.net/publication/228593520_SUS_A_quick_and_dirty_usability_scale">SUS-A quick and dirty usability scale.</a> Usability evaluation in industry, 189(194), 4-7.</p>
+                            <p> Bangor, A., Kortum, P. and Miller, J. (2009). <a href="https://dl.acm.org/doi/abs/10.5555/2835587.2835589"> Determining what individual SUS scores mean: Adding an adjective rating scale.</a> Journal of usability studies, 4(3), 114-123. </p>
+                        
                         </div>
                     </div>
                 </div>
