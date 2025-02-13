@@ -103,14 +103,14 @@ if (isset($_POST['sus_score'])) {
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="headingThree">
                         <h3 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree">
                              How to Apply the SUS Score in Projects
                             </button>
                         </h3>
                     </div>
-                    <div id="collapseOne" class="collapse" data-parent="#faqAccordion">
+                    <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
                         <div class="card-body">
                             Here's how you can apply the SUS score in a project:
 
@@ -149,8 +149,8 @@ if (isset($_POST['sus_score'])) {
     
     <!-- Footer -->
     <footer class="text-center py-3">
-        <p> Please note that all responses are anonymous and will only be used to calculate the SUS score. The calculator does not collect any personal information.
-Thank you for using the SUS Calculator and I hope it provides valuable insights into the usability of your system or product. </p>
+        <p> Please note that all responses are anonymous and will only be used to calculate the SUS score. </p>  <p> The calculator does not collect any personal information, only stores the scores for analytics purposes. </p>
+ <p> Thank you for using the SUS Calculator and I hope it provides valuable insights into the usability of your system or product. </p>
         <p>Open Source Project by <a href="https://olawaleadediran.com" target="_blank">Olawale Adediran</a></p>
         <p>Git link <a href="https://github.com/Olawaldroid/SUS-calculator" target="_blank">Git page</a></p>
     </footer>
