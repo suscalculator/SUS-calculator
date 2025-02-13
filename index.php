@@ -160,7 +160,7 @@ if (isset($_POST['sus_score'])) {
     <section id="contact" class="contact-section py-5">
         <div class="container text-center">
             <h2>Contact</h2>
-            <p> For Colaborations and Enquiries</p>
+            <p> For colaborations and enquiries</p>
             <p>Email: <a href="mailto:hello@suscalculator.com">hello@suscalculator.com</a></p>
         </div>
     </section>
