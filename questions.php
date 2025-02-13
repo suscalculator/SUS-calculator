@@ -12,14 +12,26 @@ $questions = [
     "I felt very confident using the design.",
     "I needed to learn a lot of things before I could get going with this design."
 ];
+
 // Generate question form fields dynamically
 foreach ($questions as $index => $question) {
+    $questionNumber = $index + 1;
     echo '<div class="form-group">';
-    echo '<label><b>' . ($index + 1) . '. ' . $question . '</b></label><br>';
-    for ($i = 1; $i <= 5; $i++) {
+    echo '<label><b>' . $questionNumber . '. ' . $question . '</b></label><br>';
+
+    // Options
+    $options = [
+        1 => "Strongly Disagree",
+        2 => "Disagree",
+        3 => "Neutral",
+        4 => "Agree",
+        5 => "Strongly Agree"
+    ];
+
+    foreach ($options as $value => $text) {
         echo '<div class="form-check form-check-inline">';
-        echo '<input class="form-check-input" type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required>';
-        echo '<label class="form-check-label">' . ($i === 1 ? "Strongly disagree" : ($i === 5 ? "Strongly agree" : "")) . '</label>';
+        echo '<input class="form-check-input custom-radio" type="radio" id="q' . $questionNumber . '-' . $value . '" name="q' . $questionNumber . '" value="' . $value . '" required>';
+        echo '<label class="form-check-label clickable-label" for="q' . $questionNumber . '-' . $value . '">' . $text . '</label>';
         echo '</div>';
     }
     echo '</div>';
