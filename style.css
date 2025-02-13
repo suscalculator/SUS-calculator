@@ -1,25 +1,13 @@
-/* Styles for form elements and layout */
-.form-check-label {
-    margin-left: 10px;
-    cursor: pointer;
-}
-.btn-container {
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.results {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
 }
 
-.hero {
-    background-color: #1E1E1E;
-    padding-top:40px;
-    padding-bottom:40px;
+/* Styles for form elements and layout */
+.form-check-label {
+    cursor: pointer;
+    font-size: 16px; /* Adjust text size */
+    margin-left: 10px;
 }
 
 /* Increase radio button size */
@@ -30,9 +18,9 @@ input[type="radio"] {
 }
 
 /* Make labels clickable */
-.form-check-label {
-    cursor: pointer;
-    font-size: 16px; /* Adjust text size */
+.form-check {
+    display: flex;
+    align-items: center;
 }
 
 /* Center questionnaire and apply styling */
@@ -48,5 +36,34 @@ input[type="radio"] {
 /* Center buttons inside questionnaire */
 .questionnaire-box .btn-container {
     text-align: center;
+    margin-top: 20px;
 }
 
+/* Button Styles */
+.btn-container .btn {
+    width: 150px; /* Ensure buttons are uniform */
+}
+
+/* Styles for results display */
+.results {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: #1E1E1E;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .questionnaire-box {
+        max-width: 90%;
+    }
+}
