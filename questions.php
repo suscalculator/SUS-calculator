@@ -15,25 +15,22 @@ $questions = [
 
 // Generate question form fields dynamically
 foreach ($questions as $index => $question) {
-    $questionNumber = $index + 1;
     echo '<div class="form-group">';
-    echo '<label><b>' . $questionNumber . '. ' . $question . '</b></label><br>';
+    echo '<label><b>' . ($index + 1) . '. ' . $question . '</b></label>';
+    
+    echo '<div class="radio-group">';
+    
+    for ($i = 1; $i <= 5; $i++) {
+        echo '<input class="form-check-input" type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required id="q' . ($index + 1) . 'option' . $i . '">';
+        
+        // Show text only for Strongly Disagree (1) and Strongly Agree (5)
+        $labelText = ($i === 1) ? "Strongly Disagree" : (($i === 5) ? "Strongly Agree" : "");
+        $hiddenClass = ($labelText === "") ? "hidden" : ""; 
 
-    // Options
-    $options = [
-        1 => "Strongly Disagree",
-        2 => "Disagree",
-        3 => "Neutral",
-        4 => "Agree",
-        5 => "Strongly Agree"
-    ];
-
-    foreach ($options as $value => $text) {
-        echo '<div class="form-check form-check-inline">';
-        echo '<input class="form-check-input custom-radio" type="radio" id="q' . $questionNumber . '-' . $value . '" name="q' . $questionNumber . '" value="' . $value . '" required>';
-        echo '<label class="form-check-label clickable-label" for="q' . $questionNumber . '-' . $value . '">' . $text . '</label>';
-        echo '</div>';
+        echo '<label class="form-check-label ' . $hiddenClass . '" for="q' . ($index + 1) . 'option' . $i . '">' . $labelText . '</label>';
     }
+    
+    echo '</div>';
     echo '</div>';
 }
 ?>
