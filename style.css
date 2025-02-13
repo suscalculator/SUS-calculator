@@ -1,37 +1,35 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    padding-left:20px;
+    padding-right:20px;
+    
 }
 
-/* Increase radio button size */
-input[type="radio"] {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
-}
-
-/* Make labels clickable */
-.form-check-label {
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Arrange radio buttons in a row */
+/* Increase radio button size and add spacing */
 .radio-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 450px; /* Adjust as needed */
     margin: 10px 0;
 }
 
-/* Hide intermediate labels */
+.radio-group input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/* Ensure spacing between radio options */
 .radio-group label {
     flex-grow: 1;
     text-align: center;
+    margin: 0 10px;
 }
 
+/* Hide intermediate labels */
 .radio-group label.hidden {
     visibility: hidden; /* Hide middle labels */
 }
