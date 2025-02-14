@@ -1,38 +1,39 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Align radio buttons horizontally with spacing */
+/* Ensure radio buttons are in one horizontal line */
 .radio-group {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 450px; /* Adjust as needed */
+    gap: 20px; /* Ensures 20px space between options */
+    justify-content: center;
     margin: 10px 0;
 }
 
-/* Increase radio button size and add spacing */
-.radio-group input[type="radio"] {
+/* Group radio button & label together */
+.radio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Increase radio button size */
+.radio-item input[type="radio"] {
     width: 24px;
     height: 24px;
-    margin: 0 10px;
+    cursor: pointer;
 }
 
-/* Ensure even spacing between radio options */
-.radio-group label {
-    flex-grow: 1;
+/* Make labels clickable */
+.radio-item label {
+    cursor: pointer;
+    font-size: 16px;
     text-align: center;
-    margin: 0 20px; /* Ensures 20px spacing between options */
 }
 
-/* Hide intermediate labels */
-.radio-group label.hidden {
-    visibility: hidden; /* Hide middle labels */
+/* Hide middle labels */
+.radio-item label.hidden {
+    visibility: hidden;
 }
 
-/* Center questionnaire and apply styling */
+/* Center questionnaire box */
 .questionnaire-box {
     background-color: #f8f8f8;
     border-radius: 8px;
@@ -40,6 +41,7 @@ body {
     max-width: 600px;
     margin: 40px auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Center buttons inside questionnaire */
@@ -48,14 +50,8 @@ body {
     margin-top: 20px;
 }
 
-/* Button Styles */
+/* Add spacing between buttons */
 .btn-container .btn {
+    margin: 5px;
     width: 150px;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    .questionnaire-box {
-        max-width: 90%;
-    }
 }
