@@ -1,12 +1,9 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    padding-left:20px;
-    padding-right:20px;
-    
 }
 
-/* Increase radio button size and add spacing */
+/* Align radio buttons horizontally with spacing */
 .radio-group {
     display: flex;
     align-items: center;
@@ -16,17 +13,18 @@ body {
     margin: 10px 0;
 }
 
+/* Increase radio button size and add spacing */
 .radio-group input[type="radio"] {
     width: 24px;
     height: 24px;
     margin: 0 10px;
 }
 
-/* Ensure spacing between radio options */
+/* Ensure even spacing between radio options */
 .radio-group label {
     flex-grow: 1;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 20px; /* Ensures 20px spacing between options */
 }
 
 /* Hide intermediate labels */
