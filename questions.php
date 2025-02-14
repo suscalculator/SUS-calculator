@@ -15,19 +15,22 @@ $questions = [
 foreach ($questions as $index => $question) {
     echo '<div class="form-group">';
     echo '<label><b>' . ($index + 1) . '. ' . $question . '</b></label>';
+    
+    // This div ensures the radio buttons are in a row
     echo '<div class="radio-group">';
 
-    // Generate radio buttons
     for ($i = 1; $i <= 5; $i++) {
-        echo '<div class="radio-item">';
-        echo '<input class="form-check-input" type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required id="q' . ($index + 1) . '_option' . $i . '">';
+        echo '<label class="radio-label">';
+        echo '<input type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required>';
+        
+        // Only show labels for first and last option
+        if ($i === 1) {
+            echo '<span>Strongly Disagree</span>';
+        } elseif ($i === 5) {
+            echo '<span>Strongly Agree</span>';
+        }
 
-        // Show labels only for Strongly Disagree (1) and Strongly Agree (5)
-        $labelText = ($i === 1) ? "Strongly Disagree" : (($i === 5) ? "Strongly Agree" : "");
-        $hiddenClass = ($labelText === "") ? 'class="hidden"' : '';
-
-        echo '<label for="q' . ($index + 1) . '_option' . $i . '" ' . $hiddenClass . '>' . $labelText . '</label>';
-        echo '</div>';
+        echo '</label>';
     }
 
     echo '</div>'; // Close radio-group
