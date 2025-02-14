@@ -1,39 +1,35 @@
-/* Ensure radio buttons are in one horizontal line */
+/* Make the radio buttons align in one row */
 .radio-group {
     display: flex;
     align-items: center;
-    gap: 20px; /* Ensures 20px space between options */
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px; /* Ensure spacing between options */
     margin: 10px 0;
 }
 
-/* Group radio button & label together */
-.radio-item {
+/* Style each radio option */
+.radio-label {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Keep label text below */
     align-items: center;
+    text-align: center;
+    gap: 5px;
 }
 
 /* Increase radio button size */
-.radio-item input[type="radio"] {
+.radio-label input[type="radio"] {
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 
-/* Make labels clickable */
-.radio-item label {
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
+/* Ensure only first and last labels are visible */
+.radio-label span {
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* Hide middle labels */
-.radio-item label.hidden {
-    visibility: hidden;
-}
-
-/* Center questionnaire box */
+/* Center questionnaire */
 .questionnaire-box {
     background-color: #f8f8f8;
     border-radius: 8px;
@@ -42,16 +38,4 @@
     margin: 40px auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-/* Center buttons inside questionnaire */
-.questionnaire-box .btn-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Add spacing between buttons */
-.btn-container .btn {
-    margin: 5px;
-    width: 150px;
 }
