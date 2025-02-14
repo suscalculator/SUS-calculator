@@ -1,5 +1,4 @@
 <?php
-// Array of SUS questions
 $questions = [
     "I think that I would like to use this design frequently.",
     "I found the design unnecessarily complex.",
@@ -13,24 +12,25 @@ $questions = [
     "I needed to learn a lot of things before I could get going with this design."
 ];
 
-// Generate question form fields dynamically
 foreach ($questions as $index => $question) {
     echo '<div class="form-group">';
     echo '<label><b>' . ($index + 1) . '. ' . $question . '</b></label>';
-    
     echo '<div class="radio-group">';
-    
-    for ($i = 1; $i <= 5; $i++) {
-        echo '<input class="form-check-input" type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required id="q' . ($index + 1) . 'option' . $i . '">';
-        
-        // Show text only for Strongly Disagree (1) and Strongly Agree (5)
-        $labelText = ($i === 1) ? "Strongly Disagree" : (($i === 5) ? "Strongly Agree" : "");
-        $hiddenClass = ($labelText === "") ? "hidden" : ""; 
 
-        echo '<label class="form-check-label ' . $hiddenClass . '" for="q' . ($index + 1) . 'option' . $i . '">' . $labelText . '</label>';
+    // Generate radio buttons
+    for ($i = 1; $i <= 5; $i++) {
+        echo '<div class="radio-item">';
+        echo '<input class="form-check-input" type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required id="q' . ($index + 1) . '_option' . $i . '">';
+
+        // Show labels only for Strongly Disagree (1) and Strongly Agree (5)
+        $labelText = ($i === 1) ? "Strongly Disagree" : (($i === 5) ? "Strongly Agree" : "");
+        $hiddenClass = ($labelText === "") ? 'class="hidden"' : '';
+
+        echo '<label for="q' . ($index + 1) . '_option' . $i . '" ' . $hiddenClass . '>' . $labelText . '</label>';
+        echo '</div>';
     }
-    
-    echo '</div>';
-    echo '</div>';
+
+    echo '</div>'; // Close radio-group
+    echo '</div>'; // Close form-group
 }
 ?>
