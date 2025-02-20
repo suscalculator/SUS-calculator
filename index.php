@@ -39,15 +39,31 @@
     </header>
     
     <div class="container my-5">
-        <?php 
-if (isset($_POST['sus_score'])) {
-    echo '<div class="results">';
-    echo '<h2>SUS Score</h2>';
-    echo '<p class="text-primary"><b>' . round($_POST['sus_score'], 2) . '</b></p>';
-    echo '<p>Check the interpretation section for details.</p>';
-    echo '</div>';
+    <?php 
+// Check if the form has been submitted and handle the response
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $susScore = $_POST['sus_score'] ?? null;
+    $message = $_POST['message'] ?? null;
+    $cssClass = $_POST['css_class'] ?? null;
+
+    if ($susScore) {
+        // Display SUS score
+        echo '<div class="results">';
+        echo '<h2>SUS Score</h2>';
+        echo '<p class="text-primary"><b>' . round($susScore, 2) . '</b></p>';
+
+        // Display the message based on the SUS score
+        if ($message) {
+            echo '<p class="explanation ' . $cssClass . '">' . $message . '</p>';
+        }
+
+        // Add a generic interpretation message
+        echo '<p>Check the interpretation section for details.</p>';
+        echo '</div>';
+    }
 }
 ?>
+    
         <form method="post" action="process.php">       
             <?php include 'questions.php'; ?> <!-- Load questions dynamically -->
             <div class="btn-container text-center mt-4">
