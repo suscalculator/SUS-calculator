@@ -35,6 +35,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Calculate final SUS score
         $susScore = array_sum($adjustedScores) * 2.5;
 
+        // Determine usability message and CSS class
+        if ($susScore >= 86) {
+            $message = "Excellent usability: The system is highly intuitive and easy to use. Users experience minimal friction when completing tasks.";
+            $cssClass = "bg-green";
+        } elseif ($susScore >= 75) {
+            $message = "Good usability: The system is user-friendly with only minor usability concerns. Most users can complete tasks with ease.";
+            $cssClass = "bg-blue";
+        } elseif ($susScore >= 53) {
+            $message = "Marginal Usability: The system is usable but not ideal. Users may experience occasional difficulties, and improvements would enhance the experience.";
+            $cssClass = "bg-yellow";
+        } elseif ($susScore >= 40) {
+            $message = "Poor usability: The system has significant usability issues, making it frustrating for users. Improvements are essential.";
+            $cssClass = "bg-orange";
+        } else {
+            $message = "Unacceptable (Not Usable): Users struggle significantly with the system, indicating severe usability issues that require major redesigns.";
+            $cssClass = "bg-red";
+        }
+
         // Update stats
         $stats["total_uses"] += 1;
         $stats["last_used"] = date("Y-m-d H:i:s");
@@ -49,7 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Send back the result as JSON
         $response = [
-            'sus_score' => round($susScore, 2)
+            'sus_score' => round($susScore, 2),
+            'message' => $message . " Check the FAQ for more interpretations.",
+            'css_class' => $cssClass
         ];
     }
 
