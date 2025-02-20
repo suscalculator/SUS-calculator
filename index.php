@@ -231,7 +231,7 @@ $(document).ready(function () {
                     $("#modalBody").html('<div class="alert alert-danger">' + response.error + '</div>');
                 } else {
                     $("#modalTitle").text("SUS Score");
-                    $("#modalBody").html('<p><span class="' + response.cssClass + '" style="padding: 5px 10px;"><b>' + response.sus_score + '</b></span></p> <p><b>' + response.message + '</b> </p><p>Check the  <a href="#faq">FAQ</a> for interpretations.</p>');
+                    $("#modalBody").html('<p><span class="' + response.css_class + '" style="padding: 5px 10px;"><b>' + response.sus_score + '</b></span></p> <p><b>' + response.message + '</b> </p><p>Check the  <a href="#faq">FAQ</a> for interpretations.</p>');
 
 
                 }
