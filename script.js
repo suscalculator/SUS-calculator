@@ -1,9 +1,8 @@
 document.getElementById("susForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
     
-    // Run validation first
     if (!validateForm()) {
-        return; // Stop if validation fails
+        return;
     }
 
     let formData = new FormData(this);
@@ -14,19 +13,27 @@ document.getElementById("susForm").addEventListener("submit", function (event) {
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Response Data:", data); // Debugging line
+
         if (data.error) {
             alert(data.error);
         } else {
             document.getElementById("scoreValue").textContent = data.sus_score;
             document.getElementById("scoreValue").className = data.css_class;
+            
+            // Debugging: Log the message
+            console.log("Usability Message:", data.message);
+
+            // Fix: Use innerHTML
             document.getElementById("usabilityMessage").innerHTML = data.message;
 
-            // Show the modal (Bootstrap example)
+            // Ensure modal is displayed
             $("#resultModal").modal("show");
         }
     })
     .catch(error => console.error("Error:", error));
 });
+
 
 /* ✅ Form validation function to ensure all questions are answered */
 function validateForm() {
