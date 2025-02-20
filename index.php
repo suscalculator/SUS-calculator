@@ -3,6 +3,22 @@
 <html>
 <head>
     <?php include 'header.php'; ?> <!-- Include metadata and styles -->
+<meta name="description" content="SUS Calculator is a free tool that offers a user-friendly way to evaluate system usability using the System Usability Scale. Get instant insights and improve your user experience." />
+    <meta name="keywords" content="SUS, System Usability Scale, usability, SUS Calculator, free tool, user experience, UX, usability score" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://suscalculator.com/" />
+    
+    <!-- Open Graph Tags for social media sharing -->
+    <meta property="og:title" content="SUS Calculator - Quick and Free Usability Scoring" />
+    <meta property="og:description" content="Evaluate your system's usability quickly with our free SUS Calculator. Enhance your user experience with actionable insights." />
+    <meta property="og:url" content="https://suscalculator.com/" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SUS Calculator - Quick and Free Usability Scoring" />
+    <meta name="twitter:description" content="Assess your system's usability with our free SUS Calculator. Fast, reliable, and designed to improve your UX." />
+
 </head>
 <body>
     <!-- Responsive Navigation Bar -->
