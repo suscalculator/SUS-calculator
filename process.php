@@ -36,20 +36,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $susScore = array_sum($adjustedScores) * 2.5;
 
         // Determine usability message and CSS class
-        if ($susScore >= 85) {
-            $message = "🌟 **Excellent usability**: The system is highly intuitive and user-friendly. Users experience minimal friction. Keep up the great work!";
+        if ($susScore >= 86) {
+            $message = "🌟 Excellent usability: The system is highly intuitive and easy to use. Users experience minimal friction when completing tasks.";
             $cssClass = "bg-green";
-        } elseif ($susScore >= 70) {
-            $message = "✅ **Good usability**: The system is user-friendly, with only minor usability concerns. Some small tweaks could make it even better.";
+        } elseif ($susScore >= 74) {
+            $message = "✅ Good usability: The system is user-friendly with only minor usability concerns. Most users can complete tasks with ease.";
             $cssClass = "bg-blue";
-        } elseif ($susScore >= 50) {
-            $message = "⚠️ **Average usability**: The system is usable but has room for improvement. Users may encounter occasional difficulties.";
+        } elseif ($susScore >= 53) {
+            $message = "⚠️ Marginal Usability: The system is usable but not ideal. Users may experience occasional difficulties, and improvements would enhance the experience.";
             $cssClass = "bg-yellow";
-        } elseif ($susScore >= 25) {
-            $message = "❌ **Poor usability**: Users struggle with navigation and efficiency. A usability review is recommended.";
+        } elseif ($susScore >= 40) {
+            $message = "❌ Poor usability: The system has significant usability issues, making it frustrating for users. Improvements are essential.";
             $cssClass = "bg-orange";
         } else {
-            $message = "🚨 **Critical usability issues**: The system is very difficult to use. A major redesign is strongly recommended.";
+            $message = "🚨 Unacceptable (Not Usable): Users struggle significantly with the system, indicating severe usability issues that require major redesigns.";
             $cssClass = "bg-red";
         }
 
