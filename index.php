@@ -29,8 +29,8 @@
             </video>
         </div>
         <div class="hero-overlay">
-            <h1 class="hero-title text-white">System Usability Scale (SUS) Calculator </h1>
-            <p class="hero-subtitle text-white"> Use the form with your responses to calculate the SUS of your system</p>
+            <h1 class="hero-title text-white">Your Free System Usability Scale (SUS) Calculator </h1>
+            <p class="hero-subtitle text-white"> Get results instantly from 10 questions on a likert scale</p>
             <div class="mt-3">
                 <a href="#calculator" class="btn btn-primary mx-2">SUS Calculator</a>
                 <a href="#faq" class="btn btn-secondary mx-2">FAQ</a>
