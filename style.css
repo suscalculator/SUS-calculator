@@ -39,3 +39,33 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+.score-box {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bg-green {
+    background-color: #28a745;
+}
+
+.bg-blue {
+    background-color: #007bff;
+}
+
+.bg-yellow {
+    background-color: #ffc107;
+    color: black;
+}
+
+.bg-orange {
+    background-color: #fd7e14;
+}
+
+.bg-red {
+    background-color: #dc3545;
+}
