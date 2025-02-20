@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Display the message based on the SUS score
         if ($message) {
-            echo '<p class="explanation ' . $cssClass . '">' . $message . '</p>';
+            echo '<p class="explanation' . $cssClass . '">' . $message . '</p>';
         }
 
         // Add a generic interpretation message
