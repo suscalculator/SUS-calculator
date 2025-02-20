@@ -19,7 +19,7 @@ document.getElementById("susForm").addEventListener("submit", function (event) {
         } else {
             document.getElementById("scoreValue").textContent = data.sus_score;
             document.getElementById("scoreValue").className = data.css_class;
-            document.getElementById("usabilityMessage").textContent = data.message;
+            document.getElementById("usabilityMessage").innerHTML = data.message;
 
             // Show the modal (Bootstrap example)
             $("#resultModal").modal("show");
