@@ -32,10 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['sus_score'])) {
 
 // Display stats (only when included in index.php)
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    echo "<table class='table table-bordered mt-3'>";
-    echo "<tr><th>Total Uses</th><td>{$stats['total_uses']}</td></tr>";
-    echo "<tr><th>Last Used</th><td>{$stats['last_used']}</td></tr>";
-    echo "<tr><th>Average SUS Score</th><td>" . round($stats['average_score'], 2) . "</td></tr>";
+    echo "<div class='custom-rounded'>";
+    echo "<table class='table table-bordered'>";
+    echo "<tr><td>Total Calculations</td><td>{$stats['total_uses']}</td></tr>";
+    echo "<tr><td>Last Used</td><td>{$stats['last_used']}</td></tr>";
+    echo "<tr><td>Average SUS Score</td><td>" . round($stats['average_score'], 2) . "</td></tr>";
     echo "</table>";
+    echo "</div>";
 }
 ?>

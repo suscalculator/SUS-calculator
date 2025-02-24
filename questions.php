@@ -14,25 +14,32 @@ $questions = [
 
 foreach ($questions as $index => $question) {
     echo '<div class="form-group">';
-    echo '<label><b>' . ($index + 1) . '. ' . $question . '</b></label>';
+    echo '<label>' . ($index + 1) . '. ' . $question . '</label>';
+    echo '<div class="check-box-lavel"></div>'; // Empty div for spacing or styling purposes
     
-    // This div ensures the radio buttons are in a row
     echo '<div class="radio-group">';
-
-    for ($i = 1; $i <= 5; $i++) {
+    
+    // First radio button with "Strongly Disagree" label
+    echo '<label class="radio-label">';
+    echo '<span>Strongly Disagree</span>';
+    echo '<input type="radio" name="q' . ($index + 1) . '" value="1" required>';
+    echo '</label>';
+    
+    // Middle radio buttons without labels
+    echo '<div class="middle_checkbox">';
+    for ($i = 2; $i <= 4; $i++) {
         echo '<label class="radio-label">';
         echo '<input type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required>';
-        
-        // Only show labels for first and last option
-        if ($i === 1) {
-            echo '<span>Strongly Disagree</span>';
-        } elseif ($i === 5) {
-            echo '<span>Strongly Agree</span>';
-        }
-
         echo '</label>';
     }
-
+    echo '</div>';
+    
+    // Last radio button with "Strongly Agree" label
+    echo '<label class="radio-label">';
+    echo '<span>Strongly Agree</span>';
+    echo '<input type="radio" name="q' . ($index + 1) . '" value="5" required>';
+    echo '</label>';
+    
     echo '</div>'; // Close radio-group
     echo '</div>'; // Close form-group
 }

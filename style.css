@@ -2,18 +2,22 @@
 .radio-group {
     display: flex;
     align-items: center;
-    justify-content: space-evenly; /* Evenly space out the radio buttons */
+    justify-content: flex-start;
+    gap: 35px;
+    /* Evenly space out the radio buttons */
     margin: 10px 0;
 }
 
 /* Style each radio option */
 .radio-label {
     display: flex;
-    flex-direction: column; /* Keep label text below */
+    flex-direction: column;
+    /* Keep label text below */
     align-items: center;
     text-align: center;
     gap: 5px;
-    margin-right: 20px; /* Ensure spacing between options */
+    /* margin-right: 20px; */
+    /* Ensure spacing between options */
 }
 
 /* Increase radio button size */
@@ -69,3 +73,579 @@
 .bg-red {
     background-color: #F5B5B3;
 }
+
+a,
+a:hover {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    font-family: "Inter", serif;
+}
+
+
+
+/* offcanvase start */
+.off-canvas-menu {
+    width: 400px;
+    max-width: 100%;
+    background: #fff;
+    position: fixed;
+    height: 100vh;
+    z-index: 999999;
+    top: 0;
+    left: -100%;
+    transition: .3s;
+    padding: 30px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.off-canvas-menu.active {
+    left: 0;
+}
+
+.off-canvas-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+
+}
+.off-canvas-overlay.active {
+    opacity: .6;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.off-canvas-menu ul {
+    margin-top: 65px;
+    padding: 0;
+    list-style: none;
+}
+
+.off-canvas-overlay.active {
+    opacity: .5;
+    visibility: visible;
+}
+
+.dash-logo{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-open{
+    border: 0;
+    background: transparent;
+}
+.menu-open, .off-canvas-menu{
+    display: none;
+}
+
+/* offcanvase End */
+/* ============== header part start =========== */
+.navbar {
+    background: #E8EEF6;
+    height: 81px;
+    padding: 0 123px;
+}
+
+.navbar-brand {
+    color: #283547;
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: center !important;
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    gap: 47px;
+}
+
+.navbar-nav a, .dash-menu a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #283547;
+}
+
+.use_btn {
+    /* display: flex;
+    justify-self: flex-end; */
+    position: absolute;
+    right: 0;
+
+}
+
+.navbar-collapse.show {
+    background: #000;
+}
+
+.use_btn a,
+.calculator_btn,
+.calculator_btn:hover {
+    width: 172px;
+    height: 38px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #283547;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.15px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn_reset {
+    width: 81px;
+    height: 38px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #D9D9D9;
+    color: #283547;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.15px;
+    text-align: center;
+
+}
+
+/* ============== header part End =========== */
+
+/* ========== hero area start ============== */
+.hero {
+    padding-top: 170px;
+    padding-bottom: 130px;
+    background: #E8EEF6;
+}
+
+.video-container {
+    display: none;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #283547;
+    width: 570px;
+    max-width: 100%;
+    margin: 0 auto;
+
+
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #283547;
+    margin: 20px 0px;
+}
+
+.hero_image {
+    margin-top: 20px;
+}
+
+.hero_image img {
+    max-width: 100%;
+}
+
+/* ========== hero area End ============== */
+
+/* ============== question_container section start ============== */
+.question {
+    background: #F8F8FB;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.question h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #283547;
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.78px;
+    letter-spacing: 0%;
+    color: #283547;
+    margin-bottom: 40px;
+
+}
+
+.question_container form {
+    box-shadow: 0px 0px 21.1px 0px #0000001A;
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 40px;
+    background: #FFFFFF;
+
+}
+
+.question_form label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #283547;
+    margin-bottom: 0;
+
+
+}
+
+.check-box-lavel {
+    display: block;
+
+}
+
+.question_form .form-group {
+    margin-bottom: 20px;
+}
+
+.question_form .form-group span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    color: #283547;
+    display: inline-block;
+    margin: 12px 0px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.middle_checkbox {
+    display: flex;
+    gap: 60px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+    padding-top: 60px;
+}
+
+.btn-container .calculator_btn {
+    width: 107px;
+    height: 38px;
+}
+
+.note_text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    text-align: center;
+    color: #283547;
+    text-align: center;
+    width: 540px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* ============== question_container section End ============== */
+/* ============ faq start =============== */
+#faq {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #FFFFFF;
+
+}
+
+#faq .header_text {
+    text-align: center;
+}
+
+#faq .header_text h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+
+}
+
+#faq p {
+    margin: 20px 0px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #283547;
+
+
+}
+
+.accordion .card {
+    border: 1px solid #D7D7D7;
+    margin-bottom: 20px;
+    border-radius: 4px !important;
+}
+
+.accordion>.card:first-of-type,
+.accordion>.card:not(:first-of-type):not(:last-of-type) {
+    border: 1px solid #D7D7D7;
+
+}
+
+.accordion .card .card-header {
+    /* border: 1px solid #D7D7D7; */
+    margin-bottom: 0;
+    /* margin-bottom: 20px; */
+    background: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion .card .card-header h3 {
+    font-weight: 400;
+    font-size: 18px !important;
+    line-height: 21.78px !important;
+    color: #283547;
+
+
+}
+
+/* ============ faq End =============== */
+
+/* ========== stats start ============ */
+#stats {
+    background: #F8F8FB;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+#stats h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    text-align: center;
+    color: #283547;
+
+
+}
+
+#stats p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    text-align: center;
+    color: #283547;
+    margin: 20px 0px;
+}
+
+.stats-section table {
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    border-width: 1px;
+    /* overflow: hidden; */
+    width: 540px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    overflow-x: auto;
+}
+
+.custom-rounded {
+    border-radius: 15px;
+    border: 1px solid #D9D9D9;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.table-bordered th,
+.table-bordered td {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19.36px;
+
+}
+
+/* ========== stats End ============ */
+
+/* =========== contact start ========== */
+.contact-section {
+    background: #FFFDEE;
+    padding: 120px 0px;
+}
+
+.contact-section h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    text-align: center;
+    color: #283547;
+    /* margin-bottom: 10px; */
+
+
+}
+
+.contact-section p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    text-align: center;
+    color: #283547;
+    width: 540px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
+
+}
+
+.contact-section p a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-decoration: underline;
+    color: #283547;
+}
+
+/* =========== contact End ========== */
+
+@media (max-width: 767.98px) {
+    .menu-open{
+        display: block;
+        outline: none;
+    }
+    .off-canvas-menu{
+        display: flex;
+    }
+    .dash-menu a{
+        margin-bottom: 40px;
+    }
+    .use_btn{
+        position: relative;
+        right: unset;
+    }
+    .navbar {
+        padding: 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero {
+        padding-top: 154px;
+        padding-bottom: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        width: 310px;
+        line-height: 29.05px;
+    }
+
+    .hero-subtitle {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .question,
+    #faq {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .question_container form {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .middle_checkbox,
+    .radio-group {
+        gap: 40px;
+    }
+
+    .radio-label {
+        padding-top: 44px;
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    .radio-label span {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-wrap: nowrap;
+
+    }
+
+    .radio-label:last-child span {
+        transform: translateX(-150%);
+    }
+
+    #faq .header_text h2 {
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    #faq p,
+    .contact-section p {
+        font-size: 12px;
+    }
+
+}
+
+/* @media (max-width: 767.98px) { ... }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... } */
