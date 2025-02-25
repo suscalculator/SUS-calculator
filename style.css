@@ -98,9 +98,9 @@ body {
     left: -100%;
     transition: .3s;
     padding: 30px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .off-canvas-menu.active {
@@ -118,6 +118,7 @@ justify-content: space-between;
     transition: .3s;
 
 }
+
 .off-canvas-overlay.active {
     opacity: .6;
     z-index: 99999;
@@ -135,15 +136,18 @@ justify-content: space-between;
     visibility: visible;
 }
 
-.dash-logo{
+.dash-logo {
     display: flex;
     justify-content: space-between;
 }
-.menu-open{
+
+.menu-open {
     border: 0;
     background: transparent;
 }
-.menu-open, .off-canvas-menu{
+
+.menu-open,
+.off-canvas-menu {
     display: none;
 }
 
@@ -175,7 +179,8 @@ justify-content: space-between;
     gap: 47px;
 }
 
-.navbar-nav a, .dash-menu a {
+.navbar-nav a,
+.dash-menu a {
     font-weight: 700;
     font-size: 16px;
     line-height: 19.36px;
@@ -550,23 +555,111 @@ justify-content: space-between;
     color: #283547;
 }
 
+.modal-content {
+    padding: 20px;
+    border: 0px;
+}
+
+.modal-header {
+
+    padding: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D9D9D9
+}
+
+.modal-header h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    color: #283547;
+}
+
+.modal-header .close {
+    display: none;
+}
+
+.modal-body {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D9D9D9
+}
+
+.modal-body .score {
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.modal-body .score p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+    color: #283547;
+    margin: 0 !important;
+
+
+}
+
+.modal-body .description,
+.modal-body .link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.78px;
+    color: #283547;
+    margin-bottom: 0;
+}
+
+.modal-body .link {
+    margin-top: 20px;
+    /* text-align: center; */
+}
+
+.modal-body .link a {
+    color: #283547;
+}
+
+.modal-footer {
+    padding: 0;
+    padding-top: 20px;
+    justify-content: flex-start;
+
+
+}
+
+.modal-footer button, .modal-footer button:hover {
+    background: #283547;
+    /* width: 78px;
+    height: 38px; */
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+}
+
 /* =========== contact End ========== */
 
 @media (max-width: 767.98px) {
-    .menu-open{
+    .menu-open {
         display: block;
         outline: none;
     }
-    .off-canvas-menu{
+
+    .off-canvas-menu {
         display: flex;
     }
-    .dash-menu a{
+
+    .dash-menu a {
         margin-bottom: 40px;
     }
-    .use_btn{
+
+    .use_btn {
         position: relative;
         right: unset;
     }
+
     .navbar {
         padding: 20px;
         height: 60px;
