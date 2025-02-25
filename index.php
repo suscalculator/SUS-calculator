@@ -88,7 +88,7 @@
     </header>
 
 
-    <section class="question">
+    <section class="question" id="calculator">
         <div class="container question_container">
             <h2>System Usability Scale Calculator</h2>
             <?php
@@ -325,11 +325,12 @@
         </div>
     </div>
 
+    <!-- Bootstrap JS (Required for Modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery (Required for AJAX and Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap JS (Required for Modal) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- AJAX Script for Form Submission -->
     <script>
@@ -378,6 +379,10 @@
                 $('.off-canvas-menu').removeClass('active');
                 $(this).removeClass('active');
             })
+            $('.dash-menu a').click(function () {
+                $('.off-canvas-menu').removeClass('active');
+                $(".off-canvas-overlay").removeClass('active');
+            });
         });
     </script>
 </body>
