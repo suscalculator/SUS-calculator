@@ -82,7 +82,7 @@
                 <a href="#calculator" class="calculator_btn ">SUS Calculator</a>
             </div>
             <div class="hero_image">
-                <img src="/images/hero_content_image.png" alt="image">
+                <img src="./images/hero_content_image.png" alt="image">
             </div>
         </div>
     </header>
