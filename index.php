@@ -328,60 +328,84 @@
     <!-- Bootstrap JS (Required for Modal) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery (Required for AJAX and Bootstrap) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 
 
     <!-- AJAX Script for Form Submission -->
     <script>
-        $(document).ready(function () {
-            $("form").submit(function (event) {
-                event.preventDefault(); // Prevent default form submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
 
-                $.ajax({
-                    type: "POST",
-                    url: "process.php",
-                    data: $(this).serialize(),
-                    dataType: "json",
-                    success: function (response) {
-                        if (response.error) {
-                            $("#modalTitle").text("Error");
-                            $("#modalBody").html('<div class="alert alert-danger">' + response.error + '</div>');
-                        } else {
-                            $("#modalTitle").text("SUS Score");
-                            $("#modalBody").html(
-                                '<div class="score ' + response.css_class + '">' +
-                                '<p>' + response.sus_score + '</p>' +
-                                '</div>' +
-                                '<p class="description">' + response.message + '</p>' +
-                                '<p class="link">Check the <a href="#faq">FAQ</a> for interpretations.</p>'
-                            );
-                        }
-                        $("#resultModal").modal("show");
-                    }
+            if (form) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Serialize form data
+                    const formData = new FormData(form);
+
+                    fetch("process.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error("Network response was not ok");
+                            }
+                            return response.json(); // Attempt to parse JSON
+                        })
+                        .then(data => {
+                            if (data.error) {
+                                // Display error message
+                                document.getElementById("modalTitle").textContent = "Error";
+                                document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                            } else {
+                                // Display SUS score and message
+                                document.getElementById("modalTitle").textContent = "SUS Score";
+                                document.getElementById("modalBody").innerHTML = `
+            <p><span class="${data.css_class}" style="padding: 5px 10px;"><b>${data.sus_score}</b></span></p>
+            <p><b>${data.message}</b></p>
+            <p>Check the <a href="#faq">FAQ</a> for interpretations.</p>
+        `;
+                            }
+
+                            // Show the modal
+                            const modal = new bootstrap.Modal(document.getElementById("resultModal"));
+                            modal.show();
+                        })
+                        .catch(error => {
+                            console.error("Error:", error);
+                            // Display a generic error message
+                            document.getElementById("modalTitle").textContent = "Error";
+                            document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
+                            const modal = new bootstrap.Modal(document.getElementById("resultModal"));
+                            modal.show();
+                        });
                 });
+            }
+
+            // Other event listeners for menu and overlay
+            document.querySelector('.menu-open')?.addEventListener('click', function () {
+                document.querySelector('.off-canvas-menu').classList.toggle('active');
+                document.querySelector('.off-canvas-overlay').classList.toggle('active');
+                this.classList.toggle('toggle');
             });
 
-
-            $('.menu-open').click(function () {
-
-                $('.off-canvas-menu').toggleClass('active');
-                $('.off-canvas-overlay').toggleClass('active');
-                $('.menu-open').toggleClass('toggle');
-
+            document.querySelector(".close_nav")?.addEventListener('click', function () {
+                document.querySelector('.off-canvas-menu').classList.remove('active');
+                document.querySelector(".off-canvas-overlay").classList.remove('active');
             });
 
-            $(".close_nav").click(function () {
-                $('.off-canvas-menu').removeClass('active');
-                $(".off-canvas-overlay").removeClass('active');
-            })
-            $(".off-canvas-overlay").click(function () {
-                $('.off-canvas-menu').removeClass('active');
-                $(this).removeClass('active');
-            })
-            $('.dash-menu a').click(function () {
-                $('.off-canvas-menu').removeClass('active');
-                $(".off-canvas-overlay").removeClass('active');
+            document.querySelector(".off-canvas-overlay")?.addEventListener('click', function () {
+                document.querySelector('.off-canvas-menu').classList.remove('active');
+                this.classList.remove('active');
+            });
+
+            document.querySelectorAll('.dash-menu a').forEach(link => {
+                link.addEventListener('click', function () {
+                    document.querySelector('.off-canvas-menu').classList.remove('active');
+                    document.querySelector(".off-canvas-overlay").classList.remove('active');
+                });
             });
         });
     </script>
