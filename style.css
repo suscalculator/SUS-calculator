@@ -637,10 +637,11 @@ body {
     /* width: 78px;
     height: 38px; */
     border-radius: 4px;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-right: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     padding-left: 20px;
+    font-size: 15px;
 
 }
 

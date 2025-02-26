@@ -319,7 +319,7 @@
                     <!-- Result will be injected here by JavaScript -->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
                 </div>
             </div>
         </div>
@@ -363,10 +363,14 @@
                                 // Display SUS score and message
                                 document.getElementById("modalTitle").textContent = "SUS Score";
                                 document.getElementById("modalBody").innerHTML = `
-            <p><span class="${data.css_class}" style="padding: 5px 10px;"><b>${data.sus_score}</b></span></p>
-            <p><b>${data.message}</b></p>
-            <p>Check the <a href="#faq">FAQ</a> for interpretations.</p>
-        `;
+                                <div class="score ${data.css_class}">
+                                    <p>${data.sus_score}</p>
+                                </div>
+                                <p class="description">
+                                    ${data.message}
+                                </p>
+                                <p class="link">Check the <a href="#faq">FAQ</a> for interpretations.</p>
+                            `;
                             }
 
                             // Show the modal
