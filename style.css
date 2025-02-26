@@ -453,7 +453,11 @@ body {
 
 
 }
-
+#faqAccordion{
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ============ faq End =============== */
 
 /* ========== stats start ============ */
