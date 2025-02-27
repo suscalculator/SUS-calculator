@@ -346,7 +346,7 @@ body {
 
 .question_form .form-group span {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 14.52px;
     color: #283547;
     display: inline-block;
@@ -692,7 +692,7 @@ body {
 
     .hero-subtitle {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .question,
@@ -736,7 +736,7 @@ body {
 
     #faq p,
     .contact-section p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
 }
