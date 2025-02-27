@@ -5,9 +5,9 @@
 <head>
     <?php include 'header.php'; ?> <!-- Include metadata and styles -->
     <meta name="description"
-        content="SUS Calculator is a free tool that offers a user-friendly way to evaluate system usability using the System Usability Scale. Get instant insights and improve your user experience." />
+        content="This SUS Calculator is a free tool that offers a user-friendly way to evaluate system usability using the System Usability Scale. Use this calculator now to Get instant insights and improve your user experience." />
     <meta name="keywords"
-        content="SUS, System Usability Scale, usability, SUS Calculator, free tool, user experience, UX, usability score" />
+        content="SUS, System Usability Scale, usability, SUS Calculator, SUS Score, SUS Calculator, free tool, user experience, UX, usability score" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://suscalculator.com/" />
 
@@ -30,7 +30,7 @@
     <!-- Responsive Navigation Bar -->
     <div class="off-canvas-menu">
         <div class="dash-logo">
-            <a class="navbar-brand" href="#">SUS Questionnaire</a>
+            <a class="navbar-brand" href="#">SUS Calculator</a>
             <a href="#" class="close_nav"><img src="./images/close.svg" alt="icon"></a>
         </div>
         <div class="dash-menu">
@@ -79,7 +79,7 @@
             <h1 class="hero-title">Your Free System Usability Scale (SUS) Calculator </h1>
             <p class="hero-subtitle"> Get results instantly from 10 questions on a likert scale</p>
             <div class="mt-3">
-                <a href="#calculator" class="calculator_btn ">SUS Calculator</a>
+                <a href="#calculator" class="calculator_btn ">Use the Calculator</a>
             </div>
             <div class="hero_image">
                 <img src="./images/hero_content_image.png" alt="image">
@@ -140,63 +140,69 @@
                 <p>About the SUS calculator, how it's calculated, and many more</p>
             </div>
             <div class="accordion mt-4" id="faqAccordion">
-                <!-- Card 1: SUS Score Interpretations -->
+                <!-- Card 1: What is SUS -->
                 <div class="card">
                     <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne">
                         <h3 class="mb-0">
-                            SUS score Interpretations
+                            What is SUS
                         </h3>
                         <img src="./images/add.svg" alt="">
                     </div>
                     <div id="collapseOne" class="collapse" data-parent="#faqAccordion">
                         <div class="card-body">
-                            Here are some interpretations of different SUS scores:
-                            <p> 0-25: Extremely poor usability. This indicates that the system is almost unusable and
-                                needs significant improvements to be useful to users. </p>
-                            <p> 25-50: Poor usability. Users find the system difficult to use and would likely require
-                                extensive training or support to use it effectively. </p>
-                            <p> 50-70: Average usability. The system is usable, but there are still significant areas
-                                for improvement that could lead to a better user experience. </p>
-                            <p> 70-85: Good usability. Users find the system easy to use and navigate, with only minor
-                                areas for improvement. </p>
-                            <p> 85-100: Excellent usability. The system is very user-friendly, and users find it easy to
-                                accomplish tasks with minimal effort. </p>
+                           <p>The <strong>SUS Calculator</strong> allows you to quickly determine the usability of a system or product by answering 10 standardized questions.</p>
+
+<p>The <strong>System Usability Scale (SUS)</strong>, developed by John Brooke in 1995, is a widely recognized tool for measuring usability in human-computer interaction.</p>
+
+<h3>How It Works</h3>
+<ul>
+    <li>Answer the 10 usability-related questions.</li>
+    <li>Click Submit to calculate your SUS score.</li>
+    <li>View your score, which provides a high-level assessment of usability.</li>
+</ul>
+
+<p>While SUS provides a broad usability assessment, it should be used alongside other user experience metrics such as:</p>
+
+<ul>
+    <li><strong>Qualitative feedback</strong> (user comments, surveys)</li>
+    <li><strong>Task completion rates</strong> (success/failure rates)</li>
+    <li><strong>Error rates</strong> (frequency of user mistakes)</li>
+</ul>
+
+<p>Since SUS is a one-dimensional tool, it is useful for comparing different systems but may not capture detailed usability challenges without further qualitative analysis.</p>
+
+<p>For accurate interpretation, always consider the specific context, user population, and system complexity, rather than relying solely on numerical scores.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: What is SUS? -->
+                <!-- Card 2: SUS score intepretations -->
                 <div class="card">
                     <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo">
                         <h3 class="mb-0">
-                            What is SUS?
+                            SUS score intepretations
                         </h3>
                         <img src="./images/add.svg" alt="">
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
                         <div class="card-body">
-                            The SUS (System Usability Score) Calculator allows you to quickly and easily calculate your
-                            SUS score based on your responses to 10 questions about the usability of a system or
-                            product. The SUS score is a single number that represents the overall usability of the
-                            system or product, with higher scores indicating better usability.
-                            <p> I want to acknowledge and give credit to John Brooke, 1995 for his work on the
-                                development of the SUS, which has become an essential tool for measuring usability in
-                                the field of human-computer interaction. </p>
-                            <p> To use the SUS Calculator, simply answer the 10 questions about the usability of the
-                                system or product, and click the submit button. Our calculator will then calculate your
-                                SUS score and display it on the page. </p>
-                            <p> It's worth noting that while SUS scores provide a general indication of system
-                                usability, they should be used in conjunction with other user feedback, such as
-                                qualitative feedback, task completion rates, and user error rates, to gain a more
-                                comprehensive understanding of the user experience. </p>
-                            <p> Brooke, J. (1996). <a
-                                    href="https://www.researchgate.net/publication/228593520_SUS_A_quick_and_dirty_usability_scale">SUS-A
-                                    quick and dirty usability scale.</a> Usability evaluation in industry, 189(194),
-                                4-7.</p>
-                            <p> Bangor, A., Kortum, P. and Miller, J. (2009). <a
-                                    href="https://dl.acm.org/doi/abs/10.5555/2835587.2835589"> Determining what
-                                    individual SUS scores mean: Adding an adjective rating scale.</a> Journal of
-                                usability studies, 4(3), 114-123. </p>
+                           <h3>Interpreting SUS Scores Accurately</h3>
+
+<ul>
+    <li><strong>0-39: Unacceptable (Not Usable)</strong> – Users struggle significantly with the system, indicating severe usability issues that require major redesigns.</li>
+    <li><strong>40-52: Poor Usability</strong> – The system has significant usability issues, making it frustrating for users. Improvements are essential.</li>
+    <li><strong>53-73: OK / Marginal Usability</strong> – The system is usable but not ideal. Users may experience occasional difficulties, and improvements would enhance the experience.</li>
+    <li><strong>74-85: Good Usability</strong> – The system is user-friendly with only minor usability concerns. Most users can complete tasks with ease.</li>
+    <li><strong>86-100: Excellent Usability</strong> – The system is highly intuitive and easy to use. Users experience minimal friction when completing tasks.</li>
+</ul>
+
+<h4>🔹 Important Notes:</h4>
+<ul>
+    <li>A SUS score of <strong>68</strong> is considered average based on industry benchmarks.</li>
+    <li>Scores above <strong>80</strong> are in the top 10% of usability scores and generally indicate a great user experience.</li>
+    <li>The SUS scale isn’t a simple percentage; it’s best understood in relation to industry benchmarks rather than a 0-100 grading system.</li>
+</ul>
+
                         </div>
                     </div>
                 </div>
@@ -258,14 +264,16 @@
                     </div>
                     <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
                         <div class="card-body">
-                            <p> Brooke, J. (1996). <a
-                                    href="https://www.researchgate.net/publication/228593520_SUS_A_quick_and_dirty_usability_scale">SUS-A
-                                    quick and dirty usability scale.</a> Usability evaluation in industry, 189(194),
-                                4-7.</p>
-                            <p> Bangor, A., Kortum, P. and Miller, J. (2009). <a
-                                    href="https://dl.acm.org/doi/abs/10.5555/2835587.2835589"> Determining what
-                                    individual SUS scores mean: Adding an adjective rating scale.</a> Journal of
-                                usability studies, 4(3), 114-123. </p>
+                           <p>Brooke, J. (1996). <a href="https://www.researchgate.net/publication/228593520_SUS_A_quick_and_dirty_usability_scale">SUS – A quick and dirty usability scale.</a> Usability Evaluation in Industry, 189(194), 4-7.</p>
+
+<p>Bangor, A., Kortum, P., & Miller, J. (2009). <a href="https://uxpajournal.org/wp-content/uploads/sites/7/pdf/JUS_Bangor_May2009.pdf">Determining what individual SUS scores mean: Adding an adjective rating scale.</a> Journal of Usability Studies, 4(3), 114-123.</p>
+
+<p>Sauro, J. (2011). <a href="https://www.amazon.com/Practical-Guide-System-Usability-Scale/dp/1461062705">A Practical Guide to the System Usability Scale: Background, Benchmarks, & Best Practices.</a> Denver, CO: Measuring Usability LLC.</p>
+
+<p>Lewis, J. R., & Sauro, J. (2009). <a href="https://link.springer.com/chapter/10.1007/978-3-642-02806-9_12">The factor structure of the System Usability Scale.</a> Lecture Notes in Computer Science, 5619, 94-103.</p>
+
+<p>Tullis, T. S., & Stetson, J. N. (2004). <a href="https://www.researchgate.net/publication/228609327_A_Comparison_of_Questionnaires_for_Assessing_Website_Usability">A comparison of questionnaires for assessing website usability.</a> Proceedings of the Usability Professionals Association Conference, 1-12.</p>
+
                         </div>
                     </div>
                 </div>
