@@ -154,7 +154,7 @@
 
 <p>The <strong>System Usability Scale (SUS)</strong>, developed by John Brooke in 1995, is a widely recognized tool for measuring usability in human-computer interaction.</p>
 
-<h3>How It Works</h3>
+<p><b>How It Works</b></p>
 <ul>
     <li>Answer the 10 usability-related questions.</li>
     <li>Click Submit to calculate your SUS score.</li>
@@ -186,7 +186,7 @@
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
                         <div class="card-body">
-                           <h3>Interpreting SUS Scores Accurately</h3>
+                           <p> <b>Interpreting SUS Scores Accurately</b></p>
 
 <ul>
     <li><strong>0-39: Unacceptable (Not Usable)</strong> – Users struggle significantly with the system, indicating severe usability issues that require major redesigns.</li>
@@ -196,7 +196,7 @@
     <li><strong>86-100: Excellent Usability</strong> – The system is highly intuitive and easy to use. Users experience minimal friction when completing tasks.</li>
 </ul>
 
-<h4>🔹 Important Notes:</h4>
+<p>🔹 <b>Important Notes:</b></p>
 <ul>
     <li>A SUS score of <strong>68</strong> is considered average based on industry benchmarks.</li>
     <li>Scores above <strong>80</strong> are in the top 10% of usability scores and generally indicate a great user experience.</li>
