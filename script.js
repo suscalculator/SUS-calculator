@@ -57,3 +57,19 @@ function validateForm() {
     }
     return formValid;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all radio button inputs
+    const radioButtons = document.querySelectorAll(".radio-group input[type='radio']");
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener("change", function () {
+            // Find the closest question container (.form-group)
+            const formGroup = this.closest(".form-group");
+
+            if (formGroup) {
+                formGroup.classList.add("answered"); // Add class when a question is answered
+            }
+        });
+    });
+});
