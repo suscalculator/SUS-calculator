@@ -1,3 +1,19 @@
+
+/* Default style for questions */
+.form-group {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Highlight answered questions */
+.form-group.answered {
+    background-color: #D3F8D3; /* Light green when answered */
+    border: 2px solid #28a745; /* Green border for emphasis */
+}
+
 /* Make the radio buttons align in one row with proper spacing */
 .radio-group {
     display: flex;
