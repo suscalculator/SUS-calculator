@@ -1,17 +1,17 @@
 
-/* Default style for questions */
-.form-group {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease-in-out;
+/* Highlight answered question */
+.form-group.answered {
+    background-color: #f0f8ff; /* Light blue background */
+    border-left: 5px solid #007bff; /* Blue left border */
+    padding: 10px;
+    transition: background 0.3s;
 }
 
-/* Highlight answered questions */
-.form-group.answered {
-    background-color: #D3F8D3; /* Light green when answered */
-    border: 2px solid #28a745; /* Green border for emphasis */
+/* Highlight selected option */
+.radio-label.selected {
+    background-color: #d1e7fd; /* Light blue */
+    border-radius: 5px;
+    padding: 5px;
 }
 
 /* Make the radio buttons align in one row with proper spacing */
@@ -360,7 +360,7 @@ body {
     margin-bottom: 20px;
 }
 
-.question_form span {
+.question_form .form-group span {
     font-weight: 400;
     font-size: 16px;
     line-height: 14.52px;
