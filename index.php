@@ -421,6 +421,31 @@
             });
         });
     </script>
+     <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Select all radio button inputs
+    const radioButtons = document.querySelectorAll(".radio-group input[type='radio']");
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener("change", function () {
+            const formGroup = this.closest(".form-group"); // Get question container
+            const radioGroup = formGroup.querySelector(".radio-group"); // Get the radio button container
+            
+            if (formGroup) {
+                formGroup.classList.add("answered"); // Highlight the question
+            }
+
+            // Remove highlight from all options in the same question
+            radioGroup.querySelectorAll(".radio-label").forEach(label => {
+                label.classList.remove("selected");
+            });
+
+            // Highlight the selected option
+            this.closest(".radio-label").classList.add("selected");
+        });
+    });
+});
+ </script>
 
 </body>
 
