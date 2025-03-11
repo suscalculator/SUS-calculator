@@ -64,12 +64,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     radioButtons.forEach(radio => {
         radio.addEventListener("change", function () {
-            // Find the closest question container (.form-group)
-            const formGroup = this.closest(".form-group");
-
+            const formGroup = this.closest(".form-group"); // Get question container
+            const radioGroup = formGroup.querySelector(".radio-group"); // Get the radio button container
+            
             if (formGroup) {
-                formGroup.classList.add("answered"); // Add class when a question is answered
+                formGroup.classList.add("answered"); // Highlight the question
             }
+
+            // Remove highlight from all options in the same question
+            radioGroup.querySelectorAll(".radio-label").forEach(label => {
+                label.classList.remove("selected");
+            });
+
+            // Highlight the selected option
+            this.closest(".radio-label").classList.add("selected");
         });
     });
 });
+
