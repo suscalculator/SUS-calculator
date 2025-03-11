@@ -342,88 +342,62 @@
 
     <!-- AJAX Script for Form Submission -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.querySelector("form");
+document.addEventListener("DOMContentLoaded", function () {
+    // ================== Form Submission ==================
+    const form = document.querySelector("form");
 
-            if (form) {
-                form.addEventListener("submit", function (event) {
-                    event.preventDefault(); // Prevent default form submission
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
 
-                    // Serialize form data
-                    const formData = new FormData(form);
+            // Serialize form data
+            const formData = new FormData(form);
 
-                    fetch("process.php", {
-                        method: "POST",
-                        body: formData
-                    })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error("Network response was not ok");
-                            }
-                            return response.json(); // Attempt to parse JSON
-                        })
-                        .then(data => {
-                            if (data.error) {
-                                // Display error message
-                                document.getElementById("modalTitle").textContent = "Error";
-                                document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
-                            } else {
-                                // Display SUS score and message
-                                document.getElementById("modalTitle").textContent = "SUS Score";
-                                document.getElementById("modalBody").innerHTML = `
-                                <div class="score ${data.css_class}">
-                                    <p>${data.sus_score}</p>
-                                </div>
-                                <p class="description">
-                                    ${data.message}
-                                </p>
-                                <p class="link">Check the <a href="#faq">FAQ</a> for interpretations.</p>
-                            `;
-                            }
+            fetch("process.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json(); // Attempt to parse JSON
+                })
+                .then(data => {
+                    if (data.error) {
+                        // Display error message
+                        document.getElementById("modalTitle").textContent = "Error";
+                        document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                    } else {
+                        // Display SUS score and message
+                        document.getElementById("modalTitle").textContent = "SUS Score";
+                        document.getElementById("modalBody").innerHTML = `
+                        <div class="score ${data.css_class}">
+                            <p>${data.sus_score}</p>
+                        </div>
+                        <p class="description">
+                            ${data.message}
+                        </p>
+                        <p class="link">Check the <a href="#faq">FAQ</a> for interpretations.</p>
+                    `;
+                    }
 
-                            // Show the modal
-                            const modal = new bootstrap.Modal(document.getElementById("resultModal"));
-                            modal.show();
-                        })
-                        .catch(error => {
-                            console.error("Error:", error);
-                            // Display a generic error message
-                            document.getElementById("modalTitle").textContent = "Error";
-                            document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
-                            const modal = new bootstrap.Modal(document.getElementById("resultModal"));
-                            modal.show();
-                        });
+                    // Show the modal
+                    const modal = new bootstrap.Modal(document.getElementById("resultModal"));
+                    modal.show();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    // Display a generic error message
+                    document.getElementById("modalTitle").textContent = "Error";
+                    document.getElementById("modalBody").innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
+                    const modal = new bootstrap.Modal(document.getElementById("resultModal"));
+                    modal.show();
                 });
-            }
-
-            // Other event listeners for menu and overlay
-            document.querySelector('.menu-open')?.addEventListener('click', function () {
-                document.querySelector('.off-canvas-menu').classList.toggle('active');
-                document.querySelector('.off-canvas-overlay').classList.toggle('active');
-                this.classList.toggle('toggle');
-            });
-
-            document.querySelector(".close_nav")?.addEventListener('click', function () {
-                document.querySelector('.off-canvas-menu').classList.remove('active');
-                document.querySelector(".off-canvas-overlay").classList.remove('active');
-            });
-
-            document.querySelector(".off-canvas-overlay")?.addEventListener('click', function () {
-                document.querySelector('.off-canvas-menu').classList.remove('active');
-                this.classList.remove('active');
-            });
-
-            document.querySelectorAll('.dash-menu a').forEach(link => {
-                link.addEventListener('click', function () {
-                    document.querySelector('.off-canvas-menu').classList.remove('active');
-                    document.querySelector(".off-canvas-overlay").classList.remove('active');
-                });
-            });
         });
-    </script>
-     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    // Select all radio button inputs
+    }
+
+    // ================== Radio Button Selection Handling ==================
     const radioButtons = document.querySelectorAll(".radio-group input[type='radio']");
 
     radioButtons.forEach(radio => {
@@ -444,8 +418,32 @@
             this.closest(".radio-label").classList.add("selected");
         });
     });
+
+    // ================== Off-Canvas Menu Handling ==================
+    document.querySelector('.menu-open')?.addEventListener('click', function () {
+        document.querySelector('.off-canvas-menu').classList.toggle('active');
+        document.querySelector('.off-canvas-overlay').classList.toggle('active');
+        this.classList.toggle('toggle');
+    });
+
+    document.querySelector(".close_nav")?.addEventListener('click', function () {
+        document.querySelector('.off-canvas-menu').classList.remove('active');
+        document.querySelector(".off-canvas-overlay").classList.remove('active');
+    });
+
+    document.querySelector(".off-canvas-overlay")?.addEventListener('click', function () {
+        document.querySelector('.off-canvas-menu').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+    document.querySelectorAll('.dash-menu a').forEach(link => {
+        link.addEventListener('click', function () {
+            document.querySelector('.off-canvas-menu').classList.remove('active');
+            document.querySelector(".off-canvas-overlay").classList.remove('active');
+        });
+    });
 });
- </script>
+</script>
 
 </body>
 
