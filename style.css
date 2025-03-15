@@ -7,12 +7,12 @@
     transition: background 0.3s;
 }
 
-/* Highlight selected option */
+/* Highlight selected option 
 .radio-label.selected {
     background-color: #d1e7fd; /* Light blue */
-    border-radius: 5px;
-    padding: 5px;
-}
+    /*  border-radius: 5px;
+  /*    padding: 5px;
+ /*  } 
 
 /* Make the radio buttons align in one row with proper spacing */
 .radio-group {
