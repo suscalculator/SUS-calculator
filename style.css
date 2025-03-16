@@ -3,7 +3,7 @@
 .form-group.answered {
     background-color: #E8EEF6; /* Light blue background */
     border-left: 2px solid #007bff; /* Blue left border */
-  /*   padding: 10px;  */
+    padding: 4px;
     transition: background 0.3s;
 }
 
