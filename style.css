@@ -26,6 +26,7 @@
 
 /* Style each radio option */
 .radio-label {
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     /* Keep label text below */
@@ -45,7 +46,7 @@
 
 /* Ensure only first and last labels are visible */
 .radio-label span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -729,6 +730,7 @@ body {
 
     .radio-label {
         padding-top: 44px;
+        font-size: 14px;
         position: relative;
         justify-content: flex-start;
     }
