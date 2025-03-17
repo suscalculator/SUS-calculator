@@ -1,7 +1,3 @@
-Great! Here’s your `CONTRIBUTING.md` with the correct project link:  
-
----
-
 # 🛠 Contributing to SUS Calculator  
 
 Thank you for your interest in contributing to the **SUS Calculator** project! 🎉 Your contributions, whether big or small, help improve this open-source usability tool for everyone.  
