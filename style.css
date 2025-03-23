@@ -1,4 +1,30 @@
 
+.survey-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.label-left, .label-right {
+    flex: 1;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 2;
+}
+
+.radio-label input {
+    margin: 0 10px;
+}
+
 /* Highlight answered question */
 .form-group.answered {
     background-color: #E8EEF6; /* Light blue background */
