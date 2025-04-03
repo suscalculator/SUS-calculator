@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 35px;
+    gap: 32px;
     /* Evenly space out the radio buttons */
     margin: 10px 0;
 }
@@ -755,7 +755,7 @@ body {
     }
 
     .radio-label {
-        padding-top: 44px;
+        padding-top: 0px;
         font-size: 14px;
         position: relative;
         justify-content: flex-start;
