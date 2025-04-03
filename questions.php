@@ -34,6 +34,7 @@ foreach ($questions as $index => $question) {
     
     // Middle radio buttons without labels
    //  echo '<div class="middle_checkbox">';
+    echo '<div class="radio-label">';
     for ($i = 2; $i <= 4; $i++) {
         echo '<label class="radio-label">';
         echo '<input type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required>';
