@@ -23,7 +23,7 @@ foreach ($questions as $index => $question) {
     echo '</div>';
     
     
-    echo '<div class="radio-group">'style="display: flex; justify-content: space-between; max-width: 400px; margin: 4px 0;">';
+    echo '<div class="radio-group" style="display: flex; justify-content: space-between; max-width: 400px; margin: 4px 0;">';
     
     // First radio button with "Strongly Disagree" label
     
