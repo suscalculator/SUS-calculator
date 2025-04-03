@@ -26,14 +26,14 @@ foreach ($questions as $index => $question) {
     echo '<div class="radio-group">';
     
     // First radio button with "Strongly Disagree" label
-     echo '<div class="middle_checkbox">';
+    
     echo '<label class="radio-label">';
      //echo '<span style="font-size: 12px;">Strongly Agree</span>';
     echo '<input type="radio" name="q' . ($index + 1) . '" value="1" required>';
     echo '</label>';
     
     // Middle radio buttons without labels
-    echo '<div class="middle_checkbox">';
+   //  echo '<div class="middle_checkbox">';
     for ($i = 2; $i <= 4; $i++) {
         echo '<label class="radio-label">';
         echo '<input type="radio" name="q' . ($index + 1) . '" value="' . $i . '" required>';
@@ -42,7 +42,6 @@ foreach ($questions as $index => $question) {
     echo '</div>';
     
     // Last radio button with "Strongly Agree" label
-    echo '<div class="middle_checkbox">';
     echo '<label class="radio-label">';
      //echo '<span style="font-size: 12px;">Strongly Agree</span>';
     echo '<input type="radio" name="q' . ($index + 1) . '" value="5" required>';
