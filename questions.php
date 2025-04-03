@@ -31,6 +31,20 @@ foreach ($questions as $index => $question) {
      //echo '<span style="font-size: 12px;">Strongly Agree</span>';
     echo '<input type="radio" name="q' . ($index + 1) . '" value="1" required>';
     echo '</label>';
+
+        echo '<label class="radio-label">';
+     //echo '<span style="font-size: 12px;">Strongly Agree</span>';
+    echo '<input type="radio" name="q' . ($index + 1) . '" value="2" required>';
+    echo '</label>';
+
+            echo '<label class="radio-label">';
+     //echo '<span style="font-size: 12px;">Strongly Agree</span>';
+    echo '<input type="radio" name="q' . ($index + 1) . '" value="3" required>';
+    echo '</label>';
+                echo '<label class="radio-label">';
+     //echo '<span style="font-size: 12px;">Strongly Agree</span>';
+    echo '<input type="radio" name="q' . ($index + 1) . '" value="4" required>';
+    echo '</label>';
     
     // Middle radio buttons without labels
    //  echo '<div class="middle_checkbox">';
