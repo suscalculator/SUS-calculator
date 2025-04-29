@@ -2,7 +2,7 @@
 <!-- This file contains metadata and external resource links (CSS, JS) -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUS Questionnaire</title>
+<title>Instant System Usability Scale (SUS) Questionnaire with Calculator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
