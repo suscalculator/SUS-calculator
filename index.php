@@ -52,7 +52,7 @@
     </div>
     <div class="off-canvas-overlay"></div>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">SUS Calculator</a>
+        <a class="navbar-brand" href="https://suscalculator.com/">SUS Calculator</a>
         <button type="button" class="menu-open">
             <img src="./images/menu.svg" alt="icon">
         </button>
