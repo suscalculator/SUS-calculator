@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://suscalculator.com/" />
 
     <!-- Open Graph Tags for social media sharing -->
-    <meta property="og:title" content="SUS Calculator - Quick and Free Usability Scoring" />
+    <meta property="og:title" content="Instant SUS Questionaire and Calculator - Quick and Free Usability Scoring" />
     <meta property="og:description"
         content="Evaluate your system's usability quickly with our free SUS Calculator. Enhance your user experience with actionable insights." />
     <meta property="og:url" content="https://suscalculator.com/" />
@@ -20,7 +20,7 @@
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SUS Calculator - Quick and Free Usability Scoring" />
+    <meta name="twitter:title" content="Instant SUS Questionaire and Calculator - Quick and Free Usability Scoring" />
     <meta name="twitter:description"
         content="Assess your system's usability with our free SUS Calculator. Fast, reliable, and designed to improve your UX." />
 
@@ -52,7 +52,7 @@
     </div>
     <div class="off-canvas-overlay"></div>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">SUS Questionnaire</a>
+        <a class="navbar-brand" href="#">SUS Calculator</a>
         <button type="button" class="menu-open">
             <img src="./images/menu.svg" alt="icon">
         </button>
